@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Github } from 'lucide-react';
 
 interface PlayerSelectionProps {
   onSelectPlayers: (playerCount: number) => void;
@@ -54,6 +55,16 @@ export const PlayerSelection: React.FC<PlayerSelectionProps> = ({ onSelectPlayer
             </CardContent>
           </Card>
         </CardContent>
+        <div className="p-4 border-t border-gray-700">
+          <Button 
+            variant="outline" 
+            className="w-full border-green-400 text-green-400 hover:bg-green-400/10"
+            onClick={() => window.location.href = '/github-analyzer'}
+          >
+            <Github className="mr-2 h-4 w-4" />
+            GitHub Repository Analizi
+          </Button>
+        </div>
       </Card>
     </div>
   );
